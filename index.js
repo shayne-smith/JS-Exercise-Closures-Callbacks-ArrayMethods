@@ -223,8 +223,9 @@ function removeApple(strings) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(strings) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return strings.reduce(reducer);
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -242,8 +243,9 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  const fullNames = runners.map(item => `${item.last_name}, ${item.first_name}`);
+  return fullNames;
 }
 
 /**
@@ -258,8 +260,9 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  const capitalized = runners.map(item => item.first_name.toUpperCase());
+  return capitalized;
 }
 
 /**
@@ -276,8 +279,9 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  const runnersByShirtSize = runners.filter(element => element.shirt_size === tShirtSize);
+  return runnersByShirtSize;
 }
 
 /**
