@@ -310,11 +310,14 @@ function tallyUpDonations(runners) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * Counter1 returns a function named counter() that incremenets the count variable.
+ * Counter2 returns only the incremented count variable. 
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ * They both use closure because the count variables is accessed in both the counter() and counter2() functions but defined outside the function scope.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * 
 */
 
 // counter1 code
